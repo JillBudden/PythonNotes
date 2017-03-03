@@ -53,6 +53,7 @@ engine = create_engine('sqlite:///Chinook.sqlite')
 
 # Execute query and store records in DataFrame: df
 df = pd.read_sql_query('SELECT * FROM Album', engine)
+# or another example: df = pd.read_sql_query('SELECT * FROM Employee WHERE EmployeeID >= 6 ORDER BY BirthDate', engine)
 
 # Print head of DataFrame
 print(df.head())
